@@ -2,7 +2,7 @@
 #include <cstring>
 #define NN 5005
 
-char[NN] mapas[2];
+char mapas[2][NN];
 int t, x, y, tam;
 bool finished;
 
