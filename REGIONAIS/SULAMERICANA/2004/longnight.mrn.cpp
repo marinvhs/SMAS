@@ -8,7 +8,7 @@ void bt(int vis, int time_left, int mask, int depth){
 	if(time_left < 0) return;
 	if(depth > max_depth) max_depth = depth;
 	if(max_depth < max_poss)
-		ILOOP(i) if(!(mask&(1<<i)) && d[vis][i] < time_left)
+		ILOOP(i) if(!(mask&(1<<i)) && d[vis][i] <= time_left)
 			bt(i, time_left - d[vis][i], mask|(1<<i),depth+1);
 }
 int main(void){
